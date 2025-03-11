@@ -19,7 +19,10 @@ public class Main {
         System.out.println();
         System.out.println("task2(uniqNums) = ");
         task2(nums);
-
+        System.out.println("task3(uniqStrings) = ");
+        task3(strings);
+        System.out.println("task4(countDuplicateStrings) = ");
+        task4(strings);
 
     }
 
@@ -31,5 +34,23 @@ public class Main {
 
     private static void task2(List<Integer> nums) {
         System.out.println(new HashSet<>(nums));
+    }
+
+    private static void task3(List<String> strings) {
+        System.out.println(new HashSet<>(strings));
+    }
+
+    private static void task4(List<String> strings) {
+        HashSet<String> uniqStrings = new HashSet<>(strings);
+        int count;
+        for (String uniqString : uniqStrings) {
+            count = 0;
+            for (String string : strings) {
+                if (uniqString.equals(string)) {
+                    ++count;
+                }
+            }
+            System.out.println("uniqString " + uniqString + ": count " + count);
+        }
     }
 }
