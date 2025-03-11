@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -6,7 +7,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
-        List<String> strings = new ArrayList<>(List.of("один", "два","два", "три", "три", "три"));
+        List<String> strings = new ArrayList<>(List.of("один", "два", "два", "три", "три", "три"));
 
         System.out.println(nums);
         System.out.println(strings);
@@ -15,11 +16,20 @@ public class Main {
         for (Integer num : nums) {
             task1(num);
         }
+        System.out.println();
+        System.out.println("task2(uniqNums) = ");
+        task2(nums);
+
 
     }
+
     private static void task1(int number) {
         if (number % 2 == 1) {
             System.out.print(number + " ");
         }
+    }
+
+    private static void task2(List<Integer> nums) {
+        System.out.println(new HashSet<>(nums));
     }
 }
