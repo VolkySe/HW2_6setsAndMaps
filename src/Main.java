@@ -11,5 +11,15 @@ public class Main {
         System.out.println(nums);
         System.out.println(strings);
 
+        System.out.println("task1(oddNums) = ");
+        for (Integer num : nums) {
+            task1(num);
+        }
+
+    }
+    private static void task1(int number) {
+        if (number % 2 == 1) {
+            System.out.print(number + " ");
+        }
     }
 }
